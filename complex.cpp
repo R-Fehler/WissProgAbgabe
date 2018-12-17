@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <cstddef>
 #include <cassert>
+#include <cmath>
 
 #include "complex.h"
 
@@ -23,7 +24,7 @@ MyComplex::MyComplex( const MyComplex & c ){
   //this->N = c.N;
   //this->dataPtr = new double[ this->N ];
   //kopiere komponentenweise den Vektor c
-  //for (std::size_t nx=0; nx<c.N; ++nx)
+  //for (std::size_t m=0; m<c.N; ++m)
     this->dataPtr[ 0 ] = c.dataPtr[ 0 ];
     this->dataPtr[ 1 ] = c.dataPtr[ 1 ];
 };
@@ -46,14 +47,20 @@ const double MyComplex::imag() const{
   return this->dataPtr[1];
 };  
 
+//Return norm of MyComplex
+const double MyComplex::norm() const{
+
+   return (sqrt((this->dataPtr[0]*this->dataPtr[0])+(this->dataPtr[1]*this->dataPtr[1])));
+   };  
+
 
 
             /*Ausgabe aller Einträge
-            void MyComplex::print(const string title, const int w) const{
+            void MyComplex::print(const string title, const int w) const{1111
 
-            for(std::size_t nx=0; nx<this->N; nx++)
+            for(std::size_t m=0; m<this->N; m++)
 
-                cout << title<< "(" << nx << ")=" << setw(w) << this->dataPtr[nx] << " " << endl;
+                cout << title<< "(" << m << ")=" << setw(w) << this->dataPtr[m] << " " << endl;
 
             cout << endl;
 
@@ -107,14 +114,14 @@ MyComplex & MyComplex::operator=(double c[]){
 const MyComplex MyComplex::operator+ ( const MyComplex & c2) const{
  
   const MyComplex tmp; 
-  for (std::size_t nx=0; nx<2; nx++)
-    tmp.dataPtr[nx] = this->dataPtr[nx] + c2.dataPtr[nx];
+  for (std::size_t m=0; m<2; m++)
+    tmp.dataPtr[m] = this->dataPtr[m] + c2.dataPtr[m];
   
   return tmp;
 
 };
 
-const MyComplex MyComplex::operator+ (const double skal) const{
+const MyComplex MyComplex::operator+ (const double & skal) const{
 
   const MyComplex tmp;
       tmp.dataPtr[0] = this->dataPtr[0] + skal;
@@ -129,8 +136,19 @@ const MyComplex MyComplex::operator+ (const double skal) const{
 const MyComplex MyComplex::operator- ( const MyComplex & c2) const{
  
   const MyComplex tmp; 
-  for (std::size_t nx=0; nx<2; nx++)
-    tmp.dataPtr[nx] = this->dataPtr[nx] - c2.dataPtr[nx];
+  for (std::size_t m=0; m<2; m++)
+    tmp.dataPtr[m] = this->dataPtr[m] - c2.dataPtr[m];
+  
+  return tmp;
+
+};
+
+//MyComplex-Unäres
+const MyComplex MyComplex::operator-() const{
+ 
+  const MyComplex tmp; 
+  for (std::size_t m=0; m<2; m++)
+    tmp.dataPtr[m] = -(this->dataPtr[m]);
   
   return tmp;
 

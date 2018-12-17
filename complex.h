@@ -1,6 +1,6 @@
 /* complex.h */
 
-//#ifndef COMPLEX_H_
+#ifndef COMPLEX_H_
 #define COMPLEX_H_
 #include <cstddef>
 
@@ -25,6 +25,9 @@ public:
     //Return imag-part of MyComplex
     const double imag() const;
 
+    //Return norm of MyComplex
+    const double norm() const;
+
 
                 //Ausgabe aller Einträge
                 void print(const std::string title="", const int w=8) const; //const int w=8 default Wert für Abstand. Übergabe bei Aufruf optional
@@ -47,15 +50,17 @@ public:
     const MyComplex operator+ (const MyComplex & c2) const;
     
     //MyComplex-Addition
-    const MyComplex operator+ (const double skal) const;
+    const MyComplex operator+ (const double & skal) const;
 
     //MyComplex-Subtraktion
     const MyComplex operator- (const MyComplex & c2) const;
+
+    const MyComplex operator-() const;
     
-    //Skalarprodukt
+    //Multiplikation mit Complex
     const MyComplex operator* (const MyComplex & c2) const;
     //Multiplikation mit Skalar
-    const MyComplex operator* ( const double & lambda) const;
+    const MyComplex operator* (const double & lambda) const;
 
 private:
 
@@ -66,3 +71,4 @@ private:
     //std::size_t      N;        // number of entries in the vector
 
 }; //Ende der Vector Kasse
+#endif
