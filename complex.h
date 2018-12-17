@@ -9,9 +9,10 @@ class MyComplex { //Beginn der MyComplex Klasse
 public:
 
     //Constructor
-    //MyComplex ( const double real, const double imag);
-    MyComplex ();
+    MyComplex (const double & real, const double & imag);
 
+    //Default Constructor
+    MyComplex ();
 
     //Copy-Constructor
     MyComplex( const MyComplex & c );
@@ -35,17 +36,6 @@ public:
     //Copy Operator
     MyComplex & operator=(const MyComplex & c ); //& was ist der Unterschied zwischen MyComplex & operator, MyComplex operator
 
-    //Initialisierung mit 2 Skalaren
-    MyComplex & operator=(double c[]);
-	//MyComplex & operator=( double re,  double im);
-
-                //Index Operator Reading
-                //const double  operator() ( std::size_t n ) const;
-
-                //Index Operator Writing
-                //double & operator() ( std::size_t n );
-
-
     //MyComplex-Addition
     const MyComplex operator+ (const MyComplex & c2) const;
     
@@ -64,11 +54,8 @@ public:
 
 private:
 
-    //Default Constructor: Hier PRIVATE um Ausführen des Default Constructor zu unterbinden
-    //MyComplex ();
-
     double * dataPtr;  // pointer for data
-    //std::size_t      N;        // number of entries in the vector
+    
 
 }; //Ende der Vector Kasse
 #endif

@@ -12,19 +12,21 @@
 using namespace std;
 
 //Constructor
-MyComplex::MyComplex (){
+MyComplex::MyComplex (const double & real, const double & imag)
+{
 
-  //this->N = dim;
   this->dataPtr = new double[2];
+  this->dataPtr[ 0 ] = real;
+  this->dataPtr[ 1 ] = imag;
+};
+
+MyComplex::MyComplex(){
+   this->dataPtr = new double[2];
 };
 
 //Copy-Constructor
 MyComplex::MyComplex( const MyComplex & c ){
 
-  //this->N = c.N;
-  //this->dataPtr = new double[ this->N ];
-  //kopiere komponentenweise den Vektor c
-  //for (std::size_t m=0; m<c.N; ++m)
     this->dataPtr[ 0 ] = c.dataPtr[ 0 ];
     this->dataPtr[ 1 ] = c.dataPtr[ 1 ];
 };
@@ -54,18 +56,6 @@ const double MyComplex::norm() const{
    };  
 
 
-
-            /*Ausgabe aller Einträge
-            void MyComplex::print(const string title, const int w) const{1111
-
-            for(std::size_t m=0; m<this->N; m++)
-
-                cout << title<< "(" << m << ")=" << setw(w) << this->dataPtr[m] << " " << endl;
-
-            cout << endl;
-
-            }; */
-
 //Copy Operator
 MyComplex & MyComplex::operator= ( const MyComplex & c ){
 
@@ -82,33 +72,6 @@ MyComplex & MyComplex::operator= ( const MyComplex & c ){
   return *this; //*this warum *
   
 };
-
-//Initialisierung mit 2 Skalaren
-MyComplex & MyComplex::operator=(double c[]){
- //MyComplex & MyComplex::operator=(double){
-
-    this->dataPtr[0]=c[0];
-    this->dataPtr[1]=c[1];
-
-  return *this;
-
-}; 
-
-                /*Index Operator Reading
-                const double  MyComplex::operator() ( std::size_t n ) const{
-                // index check with assert: index check takes time 
-                assert(n<this->N) ;
-
-                return this->dataPtr[n];
-                }; 
-
-                //Index Operator Writing
-                double & Vector::operator() ( std::size_t n ){
-                // index check with assert: index check takes time 
-                assert(n<this->N) ;
-                
-                return this->dataPtr[n];
-                }; */
 
 //MyComplex-Addition
 const MyComplex MyComplex::operator+ ( const MyComplex & c2) const{
