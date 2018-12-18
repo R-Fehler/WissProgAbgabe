@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-12-18 Di 20:20 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Richard F" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0e85786">1. Richard Fehler [1839907] und Manuel Wenzel[].</a></li>
+<li><a href="#orgc83c426">2. Source Code:</a>
+<ul>
+<li><a href="#org1f3002f">2.1. complex.h</a></li>
+<li><a href="#org73b1b89">2.2. complex.cpp</a></li>
+<li><a href="#org81b9170">2.3. main<sub>complex</sub><sub>beispiel.cpp</sub></a></li>
+<li><a href="#orgef19b31">2.4. operator Schreibweise</a></li>
+<li><a href="#org865e621">2.5. konvergence.cpp</a></li>
+</ul>
+</li>
+<li><a href="#orge3e4875">3. Building</a></li>
+<li><a href="#org6a56c51">4. Ausfuehren der Berechnung</a>
+<ul>
+<li><a href="#orge144ad5">4.1. Skript:</a></li>
+</ul>
+</li>
+<li><a href="#orgdd9fdeb">5. Plots</a>
+<ul>
+<li><a href="#orgbd9595e">5.1. Skript</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0e85786" class="outline-2">
+<h2 id="org0e85786"><span class="section-number-2">1</span> Richard Fehler [1839907] und Manuel Wenzel[].</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+ Implementierung einer Klasse komplexer Zahlen in C++
+und Visualisierung vom Konvergenzverhalten komplexer Zahlenfolgen.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc83c426" class="outline-2">
+<h2 id="orgc83c426"><span class="section-number-2">2</span> Source Code:</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1f3002f" class="outline-3">
+<h3 id="org1f3002f"><span class="section-number-3">2.1</span> complex.h</h3>
+<div class="outline-text-3" id="text-2-1">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">complex.h */</span>
+
+<span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> COMPLEX_H_
+<span style="color: #bc6ec5;">#define</span> <span style="color: #7590db;">COMPLEX_H_</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cstddef</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7;">{</span>  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Beginn der MyComplex Klasse</span>
+
+ <span style="color: #4f97d7; font-weight: bold;">public</span>:
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Constructor</span>
+  <span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">real</span>, <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">imag</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Default Constructor</span>
+  <span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #bc6ec5;">()</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Copy-Constructor</span>
+  <span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Destructor</span>
+  ~<span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #bc6ec5;">()</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return real-part of MyComplex</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #bc6ec5; font-weight: bold;">real</span><span style="color: #bc6ec5;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return imag-part of MyComplex</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #bc6ec5; font-weight: bold;">imag</span><span style="color: #bc6ec5;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return norm of MyComplex</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #bc6ec5; font-weight: bold;">norm</span><span style="color: #bc6ec5;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Ausgabe aller Eintr&#228;ge</span>
+  <span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">print</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">string</span> <span style="color: #7590db;">title</span> = <span style="color: #2d9574;">""</span>,
+             <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">w</span> = <span style="color: #a45bad;">8</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">const int w=8 default Wert f&#252;r Abstand.</span>
+                                      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">&#220;bergabe bei Aufruf optional</span>
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Copy Operator</span>
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">=</span><span style="color: #bc6ec5;">(</span>
+      <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c</span><span style="color: #bc6ec5;">)</span>;  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">&amp; was ist der Unterschied zwischen MyComplex &amp;</span>
+                            <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">operator, MyComplex operator</span>
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Addition</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">+</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Addition</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">+</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">skal</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Subtraktion</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">-</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">-</span><span style="color: #bc6ec5;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Multiplikation mit Complex</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">*</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Multiplikation mit Skalar</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">*</span><span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">lambda</span><span style="color: #bc6ec5;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span>;
+
+ <span style="color: #4f97d7; font-weight: bold;">private</span>:
+  <span style="color: #ce537a; font-weight: bold;">double</span>* <span style="color: #7590db;">dataPtr</span>;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">pointer for data</span>
+
+<span style="color: #4f97d7;">}</span>;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Ende der Vector Kasse</span>
+<span style="color: #bc6ec5;">#endif</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org73b1b89" class="outline-3">
+<h3 id="org73b1b89"><span class="section-number-3">2.2</span> complex.cpp</h3>
+<div class="outline-text-3" id="text-2-2">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #2aa1ae; background-color: #292e34;">/* </span><span style="color: #2aa1ae; background-color: #292e34;">complex.cpp */</span>
+
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cassert</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cmath</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cstddef</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cstdlib</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iomanip</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"complex.h"</span>
+
+<span style="color: #4f97d7; font-weight: bold;">using</span> <span style="color: #4f97d7; font-weight: bold;">namespace</span> <span style="color: #a45bad;">std</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Constructor</span>
+<span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">real</span>, <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">imag</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">double</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> = real;
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> = imag;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">double</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>; <span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Copy-Constructor</span>
+<span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> = c.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> = c.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Destructor</span>
+<span style="color: #a45bad;">MyComplex</span>::~<span style="color: #bc6ec5; font-weight: bold;">MyComplex</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">delete</span><span style="color: #bc6ec5;">[]</span> <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr; <span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return real-part of MyComplex</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">real</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>; <span style="color: #4f97d7;">}</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return imag-part of MyComplex</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">imag</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span> <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>; <span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Return norm of MyComplex</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #bc6ec5; font-weight: bold;">norm</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">(</span>sqrt<span style="color: #2d9574;">(</span><span style="color: #67b11d;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #b1951d;">[</span><span style="color: #a45bad;">0</span><span style="color: #b1951d;">]</span> * <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #b1951d;">[</span><span style="color: #a45bad;">0</span><span style="color: #b1951d;">]</span><span style="color: #67b11d;">)</span> +
+               <span style="color: #67b11d;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #b1951d;">[</span><span style="color: #a45bad;">1</span><span style="color: #b1951d;">]</span> * <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #b1951d;">[</span><span style="color: #a45bad;">1</span><span style="color: #b1951d;">]</span><span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Copy Operator</span>
+<span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">=</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">delete</span><span style="color: #bc6ec5;">[]</span> <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr;
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">try to allocate memory and catch an exception</span>
+
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr = <span style="color: #4f97d7; font-weight: bold;">new</span> <span style="color: #ce537a; font-weight: bold;">double</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">do the copying</span>
+
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> = c.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> = c.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> *<span style="color: #4f97d7; font-weight: bold;">this</span>;  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">*this warum *</span>
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Addition</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">+</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+  <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">m</span> = <span style="color: #a45bad;">0</span>; m &lt; <span style="color: #a45bad;">2</span>; m++<span style="color: #bc6ec5;">)</span>
+    tmp.dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span> = <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span> + c2.dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">+</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">skal</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> = <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> + skal;
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> = <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Substraktion</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">-</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+  <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">m</span> = <span style="color: #a45bad;">0</span>; m &lt; <span style="color: #a45bad;">2</span>; m++<span style="color: #bc6ec5;">)</span>
+    tmp.dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span> = <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span> - c2.dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">MyComplex-Un&#228;res</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">-</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+  <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">m</span> = <span style="color: #a45bad;">0</span>; m &lt; <span style="color: #a45bad;">2</span>; m++<span style="color: #bc6ec5;">)</span> tmp.dataPtr<span style="color: #bc6ec5;">[</span>m<span style="color: #bc6ec5;">]</span> = -<span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #2d9574;">[</span>m<span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Multiplikation mit Skalar</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">*</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">double</span>&amp; <span style="color: #7590db;">lambda</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> = lambda * <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span>;
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> = lambda * <span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Skalarprodukt</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #a45bad;">MyComplex</span>::<span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">*</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span>&amp; <span style="color: #7590db;">c2</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">tmp</span>;
+
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> =
+      <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">]</span> * c2.dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> - <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span> * c2.dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span>;
+
+  tmp.dataPtr<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span> =
+      <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">]</span> * c2.dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span> + <span style="color: #bc6ec5;">(</span><span style="color: #4f97d7; font-weight: bold;">this</span>-&gt;dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">1</span><span style="color: #2d9574;">]</span> * c2.dataPtr<span style="color: #2d9574;">[</span><span style="color: #a45bad;">0</span><span style="color: #2d9574;">]</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> tmp;
+<span style="color: #4f97d7;">}</span>;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org81b9170" class="outline-3">
+<h3 id="org81b9170"><span class="section-number-3">2.3</span> main<sub>complex</sub><sub>beispiel.cpp</sub></h3>
+<div class="outline-text-3" id="text-2-3">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">string</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">header file for own complex number class</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"complex.h"</span>
+
+<span style="color: #4f97d7; font-weight: bold;">using</span> <span style="color: #4f97d7; font-weight: bold;">namespace</span> <span style="color: #a45bad;">std</span>;
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">output_my_cplx</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> &amp;<span style="color: #7590db;">c</span>, <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">string</span> <span style="color: #7590db;">txt</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  cout &lt;&lt; txt &lt;&lt; <span style="color: #2d9574;">": ("</span> &lt;&lt; c.real<span style="color: #bc6ec5;">()</span> &lt;&lt; <span style="color: #2d9574;">", "</span> &lt;&lt; c.imag<span style="color: #bc6ec5;">()</span> &lt;&lt; <span style="color: #2d9574;">")"</span> &lt;&lt; endl;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z1</span><span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">2</span>., <span style="color: #a45bad;">7</span>.<span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z2</span><span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">42</span>., -<span style="color: #a45bad;">9</span><span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z3</span><span style="color: #bc6ec5;">{</span>-<span style="color: #a45bad;">11</span>., <span style="color: #a45bad;">19</span>.<span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z4</span>, <span style="color: #7590db;">z5</span>, <span style="color: #7590db;">z6</span>, <span style="color: #7590db;">z7</span>, <span style="color: #7590db;">z8</span>, <span style="color: #7590db;">z9</span>;
+
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z1, <span style="color: #2d9574;">"z1 "</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z2, <span style="color: #2d9574;">"z2 "</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z3, <span style="color: #2d9574;">"z3 "</span><span style="color: #bc6ec5;">)</span>;
+
+  z4 = z1 * z2;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z4, <span style="color: #2d9574;">"z4=z1*z2 ="</span><span style="color: #bc6ec5;">)</span>;
+  z5 = <span style="color: #bc6ec5;">(</span>z1 + z2<span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z5, <span style="color: #2d9574;">"z5=(z1+z2) ="</span><span style="color: #bc6ec5;">)</span>;
+  z6 = <span style="color: #bc6ec5;">(</span>z1 + z2<span style="color: #bc6ec5;">)</span> * <span style="color: #a45bad;">2</span>.;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z6, <span style="color: #2d9574;">"z6=(z1+z2)*2. = "</span><span style="color: #bc6ec5;">)</span>;
+  z7 = <span style="color: #bc6ec5;">(</span>z2 + z3<span style="color: #bc6ec5;">)</span> * z1;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z7, <span style="color: #2d9574;">"z7=(z2+z3)*z1 = "</span><span style="color: #bc6ec5;">)</span>;
+  z8 = z1 + <span style="color: #a45bad;">5</span>.;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z8, <span style="color: #2d9574;">"z8=z1+5. = "</span><span style="color: #bc6ec5;">)</span>;
+  z9 = -z1 + z2;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z9, <span style="color: #2d9574;">"z9=-z1+z2 = "</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgef19b31" class="outline-3">
+<h3 id="orgef19b31"><span class="section-number-3">2.4</span> operator Schreibweise</h3>
+<div class="outline-text-3" id="text-2-4">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">string</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">header file for own complex number class</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"complex.h"</span>
+
+<span style="color: #4f97d7; font-weight: bold;">using</span> <span style="color: #4f97d7; font-weight: bold;">namespace</span> <span style="color: #a45bad;">std</span>;
+
+<span style="color: #ce537a; font-weight: bold;">void</span> <span style="color: #bc6ec5; font-weight: bold;">output_my_cplx</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">MyComplex</span> &amp;<span style="color: #7590db;">c</span>, <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #a45bad;">std</span>::<span style="color: #ce537a; font-weight: bold;">string</span> <span style="color: #7590db;">txt</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">{</span>
+  cout &lt;&lt; txt &lt;&lt; <span style="color: #2d9574;">": ("</span> &lt;&lt; c.real<span style="color: #bc6ec5;">()</span> &lt;&lt; <span style="color: #2d9574;">", "</span> &lt;&lt; c.imag<span style="color: #bc6ec5;">()</span> &lt;&lt; <span style="color: #2d9574;">")"</span> &lt;&lt; endl;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z1</span><span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">2</span>., <span style="color: #a45bad;">7</span>.<span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z2</span><span style="color: #bc6ec5;">{</span><span style="color: #a45bad;">42</span>., -<span style="color: #a45bad;">9</span><span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z3</span><span style="color: #bc6ec5;">{</span>-<span style="color: #a45bad;">11</span>., <span style="color: #a45bad;">19</span>.<span style="color: #bc6ec5;">}</span>;
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z4</span>, <span style="color: #7590db;">z5</span>, <span style="color: #7590db;">z6</span>, <span style="color: #7590db;">z7</span>, <span style="color: #7590db;">z8</span>, <span style="color: #7590db;">z9</span>;
+
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z1, <span style="color: #2d9574;">"z1 "</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z2, <span style="color: #2d9574;">"z2 "</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z3, <span style="color: #2d9574;">"z3 "</span><span style="color: #bc6ec5;">)</span>;
+
+  z4.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span>z1.<span style="color: #4f97d7; font-weight: bold;">operator</span>*<span style="color: #2d9574;">(</span>z2<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z4, <span style="color: #2d9574;">"z4=z1*z2 ="</span><span style="color: #bc6ec5;">)</span>;
+  z5.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span>z1.<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #2d9574;">(</span>z2<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z5, <span style="color: #2d9574;">"z5=(z1+z2) ="</span><span style="color: #bc6ec5;">)</span>;
+  z6.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>z1.<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #67b11d;">(</span>z2<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>.<span style="color: #4f97d7; font-weight: bold;">operator</span>*<span style="color: #2d9574;">(</span><span style="color: #a45bad;">2</span>.<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z6, <span style="color: #2d9574;">"z6=(z1+z2)*2. = "</span><span style="color: #bc6ec5;">)</span>;
+  z7.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>z2.<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #67b11d;">(</span>z3<span style="color: #67b11d;">)</span><span style="color: #2d9574;">)</span>.<span style="color: #4f97d7; font-weight: bold;">operator</span>*<span style="color: #2d9574;">(</span>z1<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z7, <span style="color: #2d9574;">"z7=(z2+z3)*z1 = "</span><span style="color: #bc6ec5;">)</span>;
+  z8.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span>z1.<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #2d9574;">(</span><span style="color: #a45bad;">5</span>.<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z8, <span style="color: #2d9574;">"z8=z1+5. = "</span><span style="color: #bc6ec5;">)</span>;
+  z9.<span style="color: #4f97d7; font-weight: bold;">operator</span>=<span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>z1.<span style="color: #4f97d7; font-weight: bold;">operator</span>-<span style="color: #67b11d;">()</span><span style="color: #2d9574;">)</span>.<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #2d9574;">(</span>z2<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span>;
+  output_my_cplx<span style="color: #bc6ec5;">(</span>z9, <span style="color: #2d9574;">"z9=-z1+z2 = "</span><span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org865e621" class="outline-3">
+<h3 id="org865e621"><span class="section-number-3">2.5</span> konvergence.cpp</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+<pre class="src src-C++"><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">cmath</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">fstream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">string</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">header file for own complex number class</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #2d9574;">"complex.h"</span>
+<span style="color: #4f97d7; font-weight: bold;">using</span> <span style="color: #4f97d7; font-weight: bold;">namespace</span> <span style="color: #a45bad;">std</span>;
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> <span style="color: #4f97d7;">{</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Variablen</span>
+  <span style="color: #ce537a; font-weight: bold;">MyComplex</span> <span style="color: #7590db;">z0</span>, <span style="color: #7590db;">z1</span>, <span style="color: #7590db;">c0</span>, <span style="color: #7590db;">z_ll</span>, <span style="color: #7590db;">z_ur</span>;
+  <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #7590db;">x0</span>, <span style="color: #7590db;">y0</span>, <span style="color: #7590db;">x_m</span>, <span style="color: #7590db;">y_m</span>, <span style="color: #7590db;">delta_x</span>, <span style="color: #7590db;">delta_y</span>, <span style="color: #7590db;">tmp</span><span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">2</span><span style="color: #bc6ec5;">]</span>;
+  <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">nr_iter</span>, <span style="color: #7590db;">n_x_max</span>, <span style="color: #7590db;">n_y_max</span>, <span style="color: #7590db;">n_exp</span>, <span style="color: #7590db;">n_max_iter</span>, <span style="color: #7590db;">r_conv</span>;
+  <span style="color: #ce537a; font-weight: bold;">string</span> <span style="color: #7590db;">filename</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Variablen einlesen</span>
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"nr_inter";</span>
+  cin &gt;&gt; nr_iter;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Wertebereich";</span>
+  cin &gt;&gt; x0 &gt;&gt; y0 &gt;&gt; x_m &gt;&gt; y_m;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Unterteilung";</span>
+  cin &gt;&gt; n_x_max &gt;&gt; n_y_max;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"exponent";</span>
+  cin &gt;&gt; n_exp;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Iterationsschritte";</span>
+  cin &gt;&gt; n_max_iter;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Konvergenzradius";</span>
+  cin &gt;&gt; r_conv;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Dateiname";</span>
+  cin &gt;&gt; filename;
+  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">"Komplexe Konstante";</span>
+  cin &gt;&gt; tmp<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">0</span><span style="color: #bc6ec5;">]</span> &gt;&gt; tmp<span style="color: #bc6ec5;">[</span><span style="color: #a45bad;">1</span><span style="color: #bc6ec5;">]</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">ofstream f&#252;r Ausgabedatei vorbereiten</span>
+  <span style="color: #ce537a; font-weight: bold;">ofstream</span> <span style="color: #7590db;">dateiout</span><span style="color: #bc6ec5;">(</span>filename<span style="color: #bc6ec5;">)</span>;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Berechnung delta_x und delta_y</span>
+  delta_x = <span style="color: #bc6ec5;">(</span>x_m - x0<span style="color: #bc6ec5;">)</span> / n_x_max;
+  delta_y = <span style="color: #bc6ec5;">(</span>y_m - y0<span style="color: #bc6ec5;">)</span> / n_y_max;
+
+  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">2 for-Schleifen, die Intervalle durchlaufen</span>
+  <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span><span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; n_x_max; i++<span style="color: #bc6ec5;">)</span> <span style="color: #bc6ec5;">{</span>
+    <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #2d9574;">(</span><span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">j</span> = <span style="color: #a45bad;">0</span>; j &lt; n_y_max; j++<span style="color: #2d9574;">)</span> <span style="color: #2d9574;">{</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">z0 und c0 f&#252;r die verschiedenen Teilaufgaben und Startwerte</span>
+      <span style="color: #4f97d7; font-weight: bold;">switch</span> <span style="color: #67b11d;">(</span>nr_iter<span style="color: #67b11d;">)</span> <span style="color: #67b11d;">{</span>
+        <span style="color: #4f97d7; font-weight: bold;">case</span> <span style="color: #a45bad;">1</span>:
+          z0 = MyComplex<span style="color: #b1951d;">(</span>x0 + i * delta_x, y0 + j * delta_y<span style="color: #b1951d;">)</span>;
+          c0 = MyComplex<span style="color: #b1951d;">(</span>tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>, tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span><span style="color: #b1951d;">)</span>;
+          <span style="color: #4f97d7; font-weight: bold;">break</span>;
+        <span style="color: #4f97d7; font-weight: bold;">case</span> <span style="color: #a45bad;">2</span>:
+          c0 = MyComplex<span style="color: #b1951d;">(</span>x0 + i * delta_x, y0 + j * delta_y<span style="color: #b1951d;">)</span>;
+          z0 = MyComplex<span style="color: #b1951d;">(</span>tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>, tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span><span style="color: #b1951d;">)</span>;
+          <span style="color: #4f97d7; font-weight: bold;">break</span>;
+        <span style="color: #4f97d7; font-weight: bold;">case</span> <span style="color: #a45bad;">3</span>:
+          c0 = MyComplex<span style="color: #b1951d;">(</span>x0 + i * delta_x, y0 + j * delta_y<span style="color: #b1951d;">)</span>;
+          z0 = MyComplex<span style="color: #b1951d;">(</span>tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span>, tmp<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span><span style="color: #b1951d;">)</span>;
+          <span style="color: #4f97d7; font-weight: bold;">break</span>;
+
+        <span style="color: #4f97d7; font-weight: bold;">default</span>:
+          cout &lt;&lt; <span style="color: #2d9574;">"error"</span>;
+          <span style="color: #4f97d7; font-weight: bold;">break</span>;
+      <span style="color: #67b11d;">}</span>
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Variable die Iterationsschritte z&#228;hlt</span>
+      <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i_iter</span> = <span style="color: #a45bad;">0</span>;
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">while-Schleife die erst endet, wenn Konvergenzradius oder maximale</span>
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Iterationen erreicht</span>
+      <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #67b11d;">(</span>z0.norm<span style="color: #b1951d;">()</span> &lt; r_conv &amp;&amp; i_iter &lt; n_max_iter<span style="color: #67b11d;">)</span> <span style="color: #67b11d;">{</span>
+        z1 = z0;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Startwert z0 zuweisen</span>
+
+        <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">in for wird Potenz berechnet</span>
+        <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #b1951d;">(</span><span style="color: #ce537a; font-weight: bold;">size_t</span> <span style="color: #7590db;">p</span> = <span style="color: #a45bad;">1</span>; p &lt; n_exp; p++<span style="color: #b1951d;">)</span> <span style="color: #b1951d;">{</span>
+          z1 = z1 * z0;
+        <span style="color: #b1951d;">}</span>
+
+        z1 = z1 + c0;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">c0 dazu addieren</span>
+
+        z0 = z1;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">z1 ist nun der neue Wert von z0</span>
+        i_iter++;
+      <span style="color: #67b11d;">}</span>
+
+      <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Ausgabedatei schreiben</span>
+      dateiout &lt;&lt; i &lt;&lt; <span style="color: #2d9574;">" "</span> &lt;&lt; j &lt;&lt; <span style="color: #2d9574;">" "</span> &lt;&lt; i_iter &lt;&lt; endl;
+    <span style="color: #2d9574;">}</span>
+  <span style="color: #bc6ec5;">}</span>
+  cout &lt;&lt; filename &lt;&lt; <span style="color: #2d9574;">"berechnet! "</span> &lt;&lt; endl;
+  <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orge3e4875" class="outline-2">
+<h2 id="orge3e4875"><span class="section-number-2">3</span> Building</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+./makefile
+./build<sub>konv.sh</sub>
+</p>
+</div>
+</div>
+<div id="outline-container-org6a56c51" class="outline-2">
+<h2 id="org6a56c51"><span class="section-number-2">4</span> Ausfuehren der Berechnung</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge144ad5" class="outline-3">
+<h3 id="orge144ad5"><span class="section-number-3">4.1</span> Skript:</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/usr/bin/</span><span style="color: #4f97d7; font-weight: bold;">env</span><span style="color: #2aa1ae; background-color: #292e34;"> bash</span>
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'starte Berechnung'</span>
+./konvergence&lt;start1A.dat
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'1A berechnet'</span>
+./konvergence&lt;start1B.dat
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'1B berechnet'</span>
+./konvergence&lt;start2A.dat
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'2A berechnet'</span>
+./konvergence&lt;start2B.dat
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'2B berechnet'</span>
+./konvergence&lt;start3A.dat
+<span style="color: #4f97d7;">echo</span> <span style="color: #2d9574;">'3A berechnet'</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdd9fdeb" class="outline-2">
+<h2 id="orgdd9fdeb"><span class="section-number-2">5</span> Plots</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgbd9595e" class="outline-3">
+<h3 id="orgbd9595e"><span class="section-number-3">5.1</span> Skript</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-src-container">
+<pre class="src src-gnuplot"><span style="color: #2aa1ae; background-color: #292e34;">#</span><span style="color: #2aa1ae; background-color: #292e34;">!/usr/bin/env gnuplot</span>
+<span style="color: #a45bad;">set</span> xrange [<span style="color: #a45bad;">0:750</span>]    
+<span style="color: #a45bad;">set</span> yrange [<span style="color: #a45bad;">0:500</span>]  
+<span style="color: #a45bad;">set</span> <span style="color: #bc6ec5; font-weight: bold;">pm3d</span> map
+<span style="color: #a45bad;">set</span> term jpeg 
+
+<span style="color: #a45bad;">print</span><span style="color: #2d9574;">" plotting"</span>
+
+
+<span style="color: #a45bad;">set</span> output <span style="color: #2d9574;">"Ergebnis1A.jpeg"</span>
+<span style="color: #a45bad;">set</span> <span style="color: #ce537a; font-weight: bold;">title</span> <span style="color: #2d9574;">"Ergebnis 1A"</span>
+spl <span style="color: #2d9574;">'./ergebnis1A.dat'</span> u 1:2:3 <span style="color: #ce537a; font-weight: bold;">with</span> <span style="color: #bc6ec5; font-weight: bold;">image</span>
+<span style="color: #a45bad;">print</span>  <span style="color: #2d9574;">"Ergebnis 1A"</span>
+<span style="color: #a45bad;">unset</span> output
+<span style="color: #a45bad;">unset</span> <span style="color: #ce537a; font-weight: bold;">title</span>
+<span style="color: #a45bad;">set</span> output <span style="color: #2d9574;">"Ergebnis1B.jpeg"</span>
+<span style="color: #a45bad;">set</span> <span style="color: #ce537a; font-weight: bold;">title</span> <span style="color: #2d9574;">"Ergebnis 1B"</span>
+spl <span style="color: #2d9574;">'ergebnis1B.dat'</span> u 1:2:3 <span style="color: #ce537a; font-weight: bold;">with</span> <span style="color: #bc6ec5; font-weight: bold;">image</span>
+<span style="color: #a45bad;">print</span>  <span style="color: #2d9574;">"Ergebnis 1B"</span>
+<span style="color: #a45bad;">unset</span> output
+<span style="color: #a45bad;">unset</span> <span style="color: #ce537a; font-weight: bold;">title</span>
+
+<span style="color: #a45bad;">set</span> output <span style="color: #2d9574;">"Ergebnis2A.jpeg"</span>
+<span style="color: #a45bad;">set</span> <span style="color: #ce537a; font-weight: bold;">title</span> <span style="color: #2d9574;">"Ergebnis 2A"</span>
+spl <span style="color: #2d9574;">'ergebnis2A.dat'</span> u 1:2:3 <span style="color: #ce537a; font-weight: bold;">with</span> <span style="color: #bc6ec5; font-weight: bold;">image</span>
+<span style="color: #a45bad;">print</span>  <span style="color: #2d9574;">"Ergebnis 2A"</span>
+<span style="color: #a45bad;">unset</span> output
+<span style="color: #a45bad;">unset</span> <span style="color: #ce537a; font-weight: bold;">title</span>
+
+<span style="color: #a45bad;">set</span> output <span style="color: #2d9574;">"Ergebnis2B.jpeg"</span>
+<span style="color: #a45bad;">set</span> <span style="color: #ce537a; font-weight: bold;">title</span> <span style="color: #2d9574;">"Ergebnis 2B"</span>
+spl <span style="color: #2d9574;">'ergebnis2B.dat'</span> u 1:2:3 <span style="color: #ce537a; font-weight: bold;">with</span> <span style="color: #bc6ec5; font-weight: bold;">image</span>
+<span style="color: #a45bad;">print</span>  <span style="color: #2d9574;">"Ergebnis 2B"</span>
+<span style="color: #a45bad;">unset</span> output
+<span style="color: #a45bad;">unset</span> <span style="color: #ce537a; font-weight: bold;">title</span>
+
+<span style="color: #a45bad;">set</span> output <span style="color: #2d9574;">"Ergebnis3A.jpeg"</span>
+<span style="color: #a45bad;">set</span> <span style="color: #ce537a; font-weight: bold;">title</span> <span style="color: #2d9574;">"Ergebnis 3A"</span>
+spl <span style="color: #2d9574;">'ergebnis3A.dat'</span> u 1:2:3 <span style="color: #ce537a; font-weight: bold;">with</span> <span style="color: #bc6ec5; font-weight: bold;">image</span>
+<span style="color: #a45bad;">print</span>  <span style="color: #2d9574;">"Ergebnis 3A"</span>
+<span style="color: #a45bad;">unset</span> output
+<span style="color: #a45bad;">unset</span> <span style="color: #ce537a; font-weight: bold;">title</span>
+</pre>
+</div>
+<p>
+<img src="../Ergebnis1A.jpeg" alt="Ergebnis1A.jpeg" />  
+<img src="../Ergebnis1B.jpeg" alt="Ergebnis1B.jpeg" />
+<img src="../Ergebnis2A.jpeg" alt="Ergebnis2A.jpeg" />
+<img src="../Ergebnis2B.jpeg" alt="Ergebnis2B.jpeg" />
+<img src="../Ergebnis3A.jpeg" alt="Ergebnis3A.jpeg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Richard F</p>
+<p class="date">Created: 2018-12-18 Di 20:20</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
