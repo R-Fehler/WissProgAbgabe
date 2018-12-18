@@ -4,6 +4,7 @@ und Visualisierung vom Konvergenzverhalten komplexer Zahlenfolgen.
 * Source Code:
 ** complex.h
 #+INCLUDE: "../complex.h" src C++
+
 ** complex.cpp 
 #+INCLUDE: "../complex.cpp" src C++
 
@@ -23,7 +24,7 @@ und Visualisierung vom Konvergenzverhalten komplexer Zahlenfolgen.
 
 * Plots
 ** Skript
-#+INCLUDE: "../script.gnuplot" src gnuplot
+#+INCLUDE: "../script.gnuplot" src gp
   [[./Ergebnis1A.jpeg]]  
 [[./Ergebnis1B.jpeg]]
 [[./Ergebnis2A.jpeg]]
