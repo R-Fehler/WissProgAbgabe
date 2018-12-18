@@ -1,1 +1,34 @@
-# TEST
+* Richard Fehler [1839907] und Manuel Wenzel[].
+ Implementierung einer Klasse komplexer Zahlen in C++
+und Visualisierung vom Konvergenzverhalten komplexer Zahlenfolgen.
+* Source Code:
+** complex.h
+#+INCLUDE: "../complex.h" src C++
+** complex.cpp 
+#+INCLUDE: "../complex.cpp" src C++
+
+** main_complex_beispiel.cpp 
+#+INCLUDE: "../main_complex_beispiel.cpp" src C++
+
+** operator Schreibweise
+#+INCLUDE: "../main_complex_beispiel.1.cpp" src C++
+** konvergence.cpp 
+#+INCLUDE: "../konvergence.cpp" src C++
+* Building 
+  ./makefile
+  ./build_konv.sh
+* Ausfuehren der Berechnung
+** Skript:
+   #+include: "../run.sh" src bash
+
+* Plots
+** Skript
+#+INCLUDE: "../script.gnuplot" src gnuplot
+  [[../Ergebnis1A.jpeg]]  
+[[../Ergebnis1B.jpeg]]
+[[../Ergebnis2A.jpeg]]
+[[../Ergebnis2B.jpeg]]
+[[../Ergebnis3A.jpeg]]
+ 
+
+
