@@ -24,11 +24,11 @@ und Visualisierung vom Konvergenzverhalten komplexer Zahlenfolgen.
 * Plots
 ** Skript
 #+INCLUDE: "../script.gnuplot" src gnuplot
-  [[../Ergebnis1A.jpeg]]  
-[[../Ergebnis1B.jpeg]]
-[[../Ergebnis2A.jpeg]]
-[[../Ergebnis2B.jpeg]]
-[[../Ergebnis3A.jpeg]]
+  [[./Ergebnis1A.jpeg]]  
+[[./Ergebnis1B.jpeg]]
+[[./Ergebnis2A.jpeg]]
+[[./Ergebnis2B.jpeg]]
+[[./Ergebnis3A.jpeg]]
  
 
 
